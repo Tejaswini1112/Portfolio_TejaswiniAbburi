@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&family=VT323&family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --void: #050505;
+    --dark: #0a0a0a;
+    --cyan: #22d3ee;
+    --cyan-glow: #67e8f9;
+    --gold: #fbbf24;
+    --amber: #f59e0b;
+    --red-string: #dc2626;
+    --warm: #fff7ed;
+    --warm-peach: #fde1c7;
+}
+
+html, body, #root {
+    background: var(--void);
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+.font-display { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.02em; }
+.font-mono { font-family: 'Space Mono', monospace; }
+.font-body { font-family: 'Outfit', sans-serif; }
+.font-pixel { font-family: 'VT323', monospace; letter-spacing: 0.04em; }
+.font-arcade { font-family: 'Press Start 2P', monospace; letter-spacing: 0.02em; }
+
+/* ===== JOY / DIM (LIGHT / DARK) THEME — final chapter ===== */
+/* Joy mode = warm peach / rose / cream palette, inspired by Act9 joy mode */
+html[data-uf-theme="light"] .uf-themed {
+    background: linear-gradient(180deg, #fff5ea 0%, #ffe8d4 45%, #ffd6c0 100%) !important;
+    color: #3a1f13;
+}
+html[data-uf-theme="light"] .uf-themed h1,
+html[data-uf-theme="light"] .uf-themed h2,
+html[data-uf-theme="light"] .uf-themed h3,
+html[data-uf-theme="light"] .uf-themed h4 { color: #3a1f13; }
+html[data-uf-theme="light"] .uf-themed .uf-card {
+    background: #fffaf1 !important;
+    border-color: rgba(234,88,12,0.35) !important;
+    color: #3a1f13 !important;
+    box-shadow: 0 8px 30px rgba(234,88,12,0.12);
+}
+html[data-uf-theme="light"] .uf-themed .uf-card .text-white,
+html[data-uf-theme="light"] .uf-themed .uf-card .text-white\/70,
+html[data-uf-theme="light"] .uf-themed .uf-card .text-white\/80,
+html[data-uf-theme="light"] .uf-themed .uf-card .text-white\/90 { color: #3a1f13 !important; }
+html[data-uf-theme="light"] .uf-themed .uf-muted { color: #78350f !important; }
+html[data-uf-theme="light"] .uf-themed .uf-strip { background: #ffedd8 !important; }
+html[data-uf-theme="light"] .uf-themed .uf-btn-gold {
+    background: #f97316 !important;
+    color: #fff8f0 !important;
+    border-color: #c2410c !important;
+}
+html[data-uf-theme="light"] .uf-themed .uf-btn-cyan {
+    background: #fb923c !important;
+    color: #fff8f0 !important;
+    border-color: #9a3412 !important;
+}
+html[data-uf-theme="light"] .uf-themed .uf-btn-outline-gold {
+    background: #fffaf1 !important;
+    color: #7c2d12 !important;
+    border-color: #c2410c !important;
+}
+/* Headline "NOT DISCOVERED. BUILT." stays warm-orange in joy mode */
+html[data-uf-theme="light"] .uf-themed .text-glow-gold {
+    color: #c2410c !important;
+    text-shadow: 0 0 18px rgba(251,146,60,0.45) !important;
+}
+
+/* Deep sub-sections use their own styles — override in joy mode */
+html[data-uf-theme="light"] .uf-themed .bg-black,
+html[data-uf-theme="light"] .uf-themed .bg-black\/60,
+html[data-uf-theme="light"] .uf-themed .bg-black\/70,
+html[data-uf-theme="light"] .uf-themed .bg-black\/80 {
+    background: rgba(255, 247, 237, 0.9) !important;
+}
+html[data-uf-theme="light"] .uf-themed [id="support-vision"],
+html[data-uf-theme="light"] .uf-themed [id="schedule-call"] {
+    background: linear-gradient(180deg, #ffedd8 0%, #ffd6c0 100%) !important;
+}
+html[data-uf-theme="light"] .uf-themed .border-white\/10,
+html[data-uf-theme="light"] .uf-themed .border-white\/5 {
+    border-color: rgba(194,65,12,0.18) !important;
+}
+html[data-uf-theme="light"] .uf-themed .text-white,
+html[data-uf-theme="light"] .uf-themed .text-white\/60,
+html[data-uf-theme="light"] .uf-themed .text-white\/70,
+html[data-uf-theme="light"] .uf-themed .text-white\/80 {
+    color: #3a1f13 !important;
+}
+html[data-uf-theme="light"] .uf-themed .text-cyan-300,
+html[data-uf-theme="light"] .uf-themed .text-cyan-300\/80,
+html[data-uf-theme="light"] .uf-themed .text-cyan-300\/90 {
+    color: #9a3412 !important;
+}
+html[data-uf-theme="light"] .uf-themed .text-amber-300,
+html[data-uf-theme="light"] .uf-themed .text-amber-200 {
+    color: #c2410c !important;
+}
+html[data-uf-theme="light"] .uf-themed input,
+html[data-uf-theme="light"] .uf-themed textarea {
+    background: #fffaf1 !important;
+    color: #3a1f13 !important;
+    border-color: rgba(194,65,12,0.35) !important;
+}
+html[data-uf-theme="light"] .uf-themed input::placeholder {
+    color: rgba(58,31,19,0.4) !important;
+}
+
+/* ===== JOY MODE — GLOBAL FILM GRADE (all scenes) ===== */
+/* Apply a warm film-grade filter to the ENTIRE cinematic player so every scene
+   gets a subtle golden-hour lift WITHOUT nuking text contrast. Uses only filter
+   (sepia + brightness + saturation) — keeps dark scenes dark-but-warm and
+   bright scenes warmly golden. */
+html[data-uf-theme="light"] [data-testid="cinematic-player"] {
+    filter: sepia(0.18) saturate(1.18) brightness(1.05) contrast(1.02) hue-rotate(-8deg);
+}
+/* Title cards + letterbox bars = warm deep brown so the "film strip" feels lit */
+html[data-uf-theme="light"] [data-testid="title-card"] {
+    background: #2a1a10 !important;
+}
+html[data-uf-theme="light"] [data-testid="cinematic-player"] > .fixed.top-0.left-0.right-0.h-8,
+html[data-uf-theme="light"] [data-testid="cinematic-player"] > .fixed.bottom-0.left-0.right-0.h-8 {
+    background: #2a1a10 !important;
+}
+
+/* ====== SCENE SHELL — reserves HUD & controls space ====== */
+.scene-shell {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 64px;  /* HUD 56 + progress 2 + air 6 */
+    padding-bottom: 80px; /* controls */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.scene-body {
+    position: relative;
+    width: 100%;
+    max-width: 72rem;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 0 1.25rem;
+    z-index: 10;
+}
+@media (max-width: 640px) {
+    .scene-shell { padding-top: 56px; padding-bottom: 72px; }
+}
+
+/* ====== PIXEL art helpers ====== */
+.pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+.pixel-shadow { box-shadow: 4px 4px 0 0 rgba(0,0,0,0.85); }
+.pixel-border-gold { border: 2px solid #fbbf24; box-shadow: inset 0 0 0 2px #050505, 4px 4px 0 0 #92400e; }
+
+/* Selection */
+::selection { background: var(--gold); color: #0a0a0a; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+
+/* Grain overlay */
+.grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+}
+
+/* Glow utilities */
+.glow-cyan { box-shadow: 0 0 40px rgba(34, 211, 238, 0.4); }
+.glow-gold { box-shadow: 0 0 60px rgba(251, 191, 36, 0.45); }
+.text-glow-cyan { text-shadow: 0 0 18px rgba(103, 232, 249, 0.55); }
+.text-glow-gold { text-shadow: 0 0 22px rgba(251, 191, 36, 0.55); }
+
+/* Glitch */
+@keyframes glitch-x {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-3px, 2px); }
+    40% { transform: translate(3px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+}
+.glitch { animation: glitch-x 0.3s infinite; }
+.glitch-text {
+    position: relative;
+    display: inline-block;
+}
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+}
+.glitch-text::before { color: var(--cyan); transform: translate(-2px, 0); mix-blend-mode: screen; animation: glitch-x 2s infinite; }
+.glitch-text::after { color: var(--red-string); transform: translate(2px, 0); mix-blend-mode: screen; animation: glitch-x 2.2s infinite reverse; }
+
+/* Scanlines */
+.scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(34,211,238,0.035),
+        rgba(34,211,238,0.035) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    z-index: 2;
+}
+
+/* Particle pulse */
+@keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.8; }
+    100% { transform: scale(2.8); opacity: 0; }
+}
+.pulse-ring { animation: pulse-ring 3s cubic-bezier(0.4,0,0.2,1) infinite; }
+
+/* Floating */
+@keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+.floaty { animation: floaty 4s ease-in-out infinite; }
+
+@layer base {
+    [data-debug-wrapper="true"] { display: contents !important; }
+}
+
+/* Utilities */
+.noise-bg {
+    background-image:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(34,211,238,0.08), transparent 70%),
+        radial-gradient(ellipse 60% 80% at 100% 100%, rgba(251,191,36,0.05), transparent 70%),
+        linear-gradient(180deg, #050505, #0a0a0a);
+}
+
+/* Hi-Tech Intro Animations */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #22d3ee;
+  text-shadow: 0 0 10px #22d3ee;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.neural-glow {
+  text-shadow: 0 0 30px #22d3ee, 0 0 60px rgba(34, 211, 238, 0.25);
+}
+
+.gold-glow {
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.5), 0 0 40px rgba(251, 191, 36, 0.25);
+}
+
+.gold-glow-intense {
+  text-shadow: 0 0 30px #fbbf24, 0 0 60px rgba(251, 191, 36, 0.5), 0 0 90px rgba(251, 191, 36, 0.3);
+}
+
+.vignette-overlay {
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(5, 5, 5, 0.6) 80%, rgba(5, 5, 5, 0.95) 100%);
+}
